@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Research Assistant with Gen AI</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #2c2c2c;
+      max-width: 800px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    h1 {
+      color: #1a1a1a;
+      font-size: 2.4em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 40px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    pre {
+      background-color: #1e1e1e;
+      color: #eaeaea;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.95em;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    img {
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .tagline {
+      font-size: 1.2em;
+      color: #555;
+      font-style: italic;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Building a Personal Research Assistant with Gen AI</h1>
+    <p class="tagline">Turn long documents into smart, conversational answers</p>
+  </header>
+
+  <p>
+    Long academic papers, research reports, or technical documentation can be overwhelming. My capstone project tackles this head-on by building a <strong>"Personal Research Assistant"</strong> using Google’s Generative AI. The tool ingests PDFs, chunks and embeds them, and then uses summarization and Retrieval-Augmented Generation (RAG) to answer user questions — all powered by Gemini and VertexAI tools.
+  </p>
+
+  <h2>🔍 The Use Case</h2>
+  <p>
+    Researchers, students, and analysts often need to extract key information from long documents quickly. This assistant allows users to upload a document and interact with it conversationally — asking for summaries or querying specific information grounded in the original content.
+  </p>
+
+  <h2>🛠️ Core Capabilities</h2>
+  <ul>
+    <li>💡 Summarization with Gemini 1.5 Flash</li>
+    <li>📎 Document Chunking & Embedding with LangChain + VertexAI</li>
+    <li>🔍 Retrieval-Augmented Generation using FAISS Vector Store</li>
+  </ul>
+
+  <h2>🧪 Implementation</h2>
+
+  <p><strong>Step 1: Load and chunk the PDF</strong></p>
+  <img src="img/Screenshot (248).png" alt="Loading the PDF" />
+  <img src="img/Screenshot (249).png" alt="Chunking code snippet" />
+
+
+  <p><strong>Step 2: Summarize with Gemini</strong></p>
+  <pre><code>
+model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
+response = model.generate_content("Summarize the following:\n" + text_chunk)
+print(response.text)
+  </code></pre>
+  <img src="img/Screenshot (250).png" alt="Summarization result" />
+
+  <p><strong>Step 3: Create embeddings & vector store</strong></p>
+  <img src="img/Screenshot (251).png" alt="FAISS creation" />
+  <img src="img/Screenshot (252).png" alt="FAISS creation" />
+
+
+  <p><strong>Step 4: Ask questions using RAG</strong></p>
+  <img src="img/Screenshot (253).png" alt="RAG query and response" />
+  <img src="img/Screenshot (254).png" alt="RAG query and response" />
+  <img src="img/Screenshot (255).png" alt="RAG query and response" />
+
+
+
+  <h2>⚠️ Limitations & Learnings</h2>
+  <ul>
+    <li>🔐 API key management requires care — always store in secrets.</li>
+    <li>📏 Token limits mean large docs must be chunked thoughtfully.</li>
+    <li>💳 Some VertexAI features need project setup + billing enabled.</li>
+  </ul>
+
+  <h2>🚀 Future Possibilities</h2>
+  <p>
+    The assistant currently works on PDFs, but future versions could ingest websites, YouTube transcripts, or even live Zoom calls. With Gemini’s increasing context windows and vision support, the tool could evolve into a fully-fledged AI research co-pilot.
+  </p>
+
+  <h2>💻 Try It or Fork It</h2>
+  <p>
+    You can view the full code and notebook on <a href="https://www.kaggle.com/code/trevorokinda17/personal-research-assistant-for-long-papers-pdfs" target="_blank">Kaggle</a>, or deploy your own research assistant via <a href="https://vercel.com">Vercel</a>. Built entirely with Google tools, it shows how GenAI can solve real problems in productivity and research.
+  </p>
+
+  <footer>
+    ✍️ Written by <strong>Trevor Okinda</strong><br>
+    Capstone Project for Gen AI Intensive (Google x Kaggle)
+  </footer>
+
+</body>
+</html>
