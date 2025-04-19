@@ -1,2 +1,4 @@
 # Gen AI Capstone Project 2025Q1
 Personal Research Assistant for Long Articles & PDFs is a GenAI-powered tool that helps users interact intelligently with large and complex documents. By combining document chunking, sentence embeddings, vector search with FAISS, and Retrieval-Augmented Generation (RAG), this project enables accurate summarization and question-answering over long texts. Whether you're reviewing research papers, reports, or ebooks, this assistant allows you to extract insights quickly and ask natural-language questions — all without reading the entire document. Powered by Google's Gemini models and open-source tools like PyMuPDF and HuggingFace Sentence Transformers.
+
+Kaggle Notebooks - https://www.kaggle.com/code/trevorokinda17/personal-research-assistant-for-long-papers-pdfs
