@@ -1,2 +1,2 @@
-# Gen_AI_Capstone_Blog_Post
-Gen AI Intensive Course Capstone 2025Q1 Documentation
+# Gen AI Capstone Project 2025Q1
+Personal Research Assistant for Long Articles & PDFs is a GenAI-powered tool that helps users interact intelligently with large and complex documents. By combining document chunking, sentence embeddings, vector search with FAISS, and Retrieval-Augmented Generation (RAG), this project enables accurate summarization and question-answering over long texts. Whether you're reviewing research papers, reports, or ebooks, this assistant allows you to extract insights quickly and ask natural-language questions — all without reading the entire document. Powered by Google's Gemini models and open-source tools like PyMuPDF and HuggingFace Sentence Transformers.
